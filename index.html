@@ -10,37 +10,44 @@
       margin: 0;
       padding: 0;
       text-align: center;
-      background-color: #f4f4f9;
+      background-color: rgb(34, 39, 54);
     }
+
     h1 {
       color: #4a4a8a;
       margin: 20px;
     }
+
     form {
       margin: 20px auto;
       width: 90%;
       max-width: 400px;
-      background: white;
+      background: rgb(34, 39, 54);
       padding: 20px;
       border-radius: 8px;
       box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      color: white;
     }
-    input, textarea, button {
+
+    input, textarea, select, button {
       width: 100%;
       margin-bottom: 15px;
       padding: 10px;
       border: 1px solid #ddd;
       border-radius: 4px;
     }
+
     button {
       background: #4a4a8a;
       color: white;
       border: none;
       cursor: pointer;
     }
+
     button:hover {
       background: #39396c;
     }
+
     .banner {
       margin: 20px auto;
       width: 1080px; /* Updated size */
@@ -54,30 +61,27 @@
       padding: 20px;
       box-sizing: border-box;
       position: relative;
-      font-size: 28px;
     }
+
     .banner h2 {
       margin: 0;
-      font-size: 40px;
-      font-weight: bold;
-   
+      font-size: 2rem;
     }
+
     .banner .content {
       display: flex;
       justify-content: space-between;
       align-items: center;
     }
+
     .banner .text {
       flex: 3;
       text-align: left;
       margin-left: 55px;
       margin-top: 30px;
-      font-family: Arial, Helvetica, sans-serif;
-     
- 
- 
-    
+      font-weight: bold;
     }
+
     .banner .icons {
       flex: 1;
       display: flex;
@@ -85,12 +89,14 @@
       gap: 10px;
       margin-top: 60px;
     }
+
     .icons img {
       width: 25px;
       height: 25px;
       margin-right: 10px;
       margin-top: 6px;
     }
+
     #download-btn {
       display: none;
       margin: 20px auto;
@@ -102,10 +108,20 @@
   <form id="banner-form">
     <input type="text" id="name" placeholder="Full Name" required />
     <input type="text" id="business" placeholder="Business Owned" required />
-    <textarea id="note" placeholder="A little note about your business... (just a sentence)" required></textarea>
+    <textarea id="note" placeholder="A little note about your business...Just a Sentence" required></textarea>
     <input type="text" id="whatsapp" placeholder="WhatsApp Contact" required />
     <input type="text" id="twitter" placeholder="Twitter Handle (e.g., @username)" required />
     <input type="text" id="instagram" placeholder="Instagram Handle (e.g., @username)" required />
+    <label for="font-style">Font Style:</label>
+    <select id="font-style">
+      <option value="Arial, sans-serif">Arial</option>
+      <option value="'Courier New', Courier, monospace">Courier New</option>
+      <option value="'Georgia', serif">Georgia</option>
+      <option value="'Tahoma', sans-serif">Tahoma</option>
+      <option value="'Verdana', sans-serif">Verdana</option>
+    </select>
+    <label for="background-color">Background Color:</label>
+    <input type="color" id="background-color" value="#818199" />
     <button type="submit">Generate Banner</button>
   </form>
   <div id="banner-preview" class="banner"></div>
