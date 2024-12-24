@@ -7,8 +7,13 @@ document.getElementById("banner-form").addEventListener("submit", function (e) {
   const whatsapp = document.getElementById("whatsapp").value;
   const twitter = document.getElementById("twitter").value;
   const instagram = document.getElementById("instagram").value;
+  const fontStyle = document.getElementById("font-style").value;
+  const backgroundColor = document.getElementById("background-color").value;
 
   const banner = document.getElementById("banner-preview");
+  banner.style.fontFamily = fontStyle;
+  banner.style.background = backgroundColor;
+
   banner.innerHTML = `
     <div class="content">
       <div class="text">
